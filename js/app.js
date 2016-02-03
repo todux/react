@@ -36,15 +36,15 @@ class App extends Component {
 
     switch (window.location.hash) {
       case '#/active':
-        dispatch(filter(Filters.ACTIVE))
+        dispatch(updateFilter(Filters.ACTIVE))
         break;
 
       case '#/completed':
-        dispatch(filter(Filters.COMPLETED))
+        dispatch(updateFilter(Filters.COMPLETED))
         break;
 
       default:
-        dispatch(filter(Filters.ALL))
+        dispatch(updateFilter(Filters.ALL))
         break;
     }
   }
