@@ -1,0 +1,44 @@
+{
+  "name": "redux-mvc-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -o",
+    "build": "browserify js/app.js -d -o index.js",
+    "build:watch": "watchify js/app.js -v -d -o index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "todomvc-app-css": "^2.0.4",
+    "todomvc-common": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "classnames": "^2.2.3",
+    "http-server": "^0.8.5",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.1.2",
+    "redux": "^3.1.6",
+    "redux-mvc-store": "file:../store",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "react",
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  }
+}
