@@ -8,7 +8,7 @@ import {
   createTodo,
   updateTodo,
   deleteTodo,
-  filter,
+  updateFilter,
   Filters,
 } from 'redux-mvc-store/actions'
 
@@ -133,7 +133,7 @@ function filterTodos(todos, filter) {
 function selector(state) {
   return {
     todos: filterTodos(state.todos, state.filter),
-    filter: state.filter
+    filter: state.filter,
   }
 }
 
@@ -142,7 +142,8 @@ App = connect(selector)(App)
 store.dispatch(initialize((callback) => {
   const initial = {
     todos: [],
-    filter: Filters.ALL
+    filter: Filters.ALL,
+    firebase_subdomain: 'shining-inferno-825',
   }
 
   callback(JSON.parse(localStorage.getItem('todo-mvc-react-store')) || initial)
