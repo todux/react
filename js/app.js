@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { render } from 'react-dom'
 import { connect, Provider } from 'react-redux'
 import c from 'classnames'
-import store from 'redux-mvc-store'
+import store from 'todux-store'
 import {
   initialize,
   createTodo,
@@ -10,7 +10,7 @@ import {
   deleteTodo,
   updateFilter,
   Filters,
-} from 'redux-mvc-store/actions'
+} from 'todux-store/actions'
 
 import TodoEntry from './components/TodoEntry'
 import TodoList from './components/TodoList'
